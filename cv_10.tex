@@ -1,0 +1,204 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Friggeri Resume/CV
+% XeLaTeX Template
+% Version 1.2 (3/5/15)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Adrien Friggeri (adrien@friggeri.net)
+% https://github.com/afriggeri/CV
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important notes:
+% This template needs to be compiled with XeLaTeX and the bibliography, if used,
+% needs to be compiled with biber rather than bibtex.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{friggeri-cv} % Add 'print' as an option into the square bracket to remove colors from this template for printing
+
+\addbibresource{bibliography.bib} % Specify the bibliography file to include publications
+
+\begin{document}
+
+\header{kyle }{morrison}{software engineer} % Your name and current job title/field
+
+%----------------------------------------------------------------------------------------
+%	SIDEBAR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{aside} % In the aside, each new line forces a line break
+\section{contact}
+~
+415-830-2297
+~
+\href{mailto:fspoon64@gmail.com}{fspoon64@gmail.com}
+\href{https://github.com/kmorrison}{github.com/kmorrison}
+\textbf{Immigration Status}: H1-B valid until 2018
+\section{have built many things with}
+{\color{red} $\varheartsuit$} Python
+MySQL, Django
+SQS, Bootstrap
+Flask, Appengine
+Heroku, git
+\section{have built a thing with}
+javascript, Postgres 
+Celery, Backbone
+docker, docker-compose
+ELK, Splunk, Tornado
+Apache Kafka
+\section{have touched}
+Mesos, Marathon, nginx
+Fab, Pyramid, memcache
+redis, RabbitMQ, twilio
+\end{aside}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{experience}
+
+\subsection{Yelp Inc.}
+
+\begin{entrylist}
+
+%------------------------------------------------
+
+\entry
+{2015-Now}
+{Seatme Web Team}
+{San Francisco California}
+{
+Worked on all aspects of the Seatme reservation system's web client and API (Django, Postgres, Backbone, docker). Other than knocking tickets off the sprint, some of the larger things I did are:\\
+\begin{itemize}
+\item Kitchen Sync tornado long-polling service (project lead)
+\begin{itemize}
+\item \textbf{tornado} for async io
+\item \textbf{nginx} configs for routing sync traffic, feature switching
+\item \textbf{splunk} alerts and dashboards for monitoring new system health
+\item \textbf{docker}, \textbf{marathon}, \textbf{mesos} for deployment
+\item amqp and \textbf{RabbitMQ} for long-poll termination
+\end{itemize}
+\item \textbf{fab} scripts to check production cluster health and enable rollbacks
+\item \textbf{javascript} with \textbf{Backbone} for sales tool changes, web interface
+\item changed push-process to be opt-in, and wrote a \textbf{slack} bot to automate the grunt-work of pushing
+\end{itemize}}
+
+\entry
+{2011-2015}
+{Revenue Team}
+{San Francisco California}
+{
+Designed and engineered the money-related stuff at Yelp, including Ordering, Collections, Credit Card Processing, alternative payment methods, reporting, monitoring, and more. (python, MySQL, sqlalchemy, SQS, Apache Kafka, Pyramid)
+\begin{itemize}
+\item Collections and Ordering work for Yelp Transaction Platform (revenue-team project lead)
+\begin{itemize}
+\item Improved ordering-collection interface to allow for order updates, refunds, cancels
+\item Transition from homegrown queueing system to \textbf{SQS}
+\item Used \textbf{Apache Kafka} to publish order results for clients, reporting, monitoring
+\item Exposed interface and later optimized old billing system for keeping track of value created and revenue reporting
+\end{itemize}
+\item Bulk data ingestion tool for setting up ads programs with large advertisers (project lead)
+\item Automated credit-card refunds (project lead)
+\item Accepting BACS Direct Debit from UK customers (project lead)
+\item Schooled in the dark art of PCI compliance
+
+\end{itemize}}
+%------------------------------------------------
+
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	Projects SECTION
+%----------------------------------------------------------------------------------------
+~
+~
+~
+~
+~
+~
+~
+~
+\pagebreak
+
+\section{projects}
+
+\begin{entrylist}
+
+%------------------------------------------------
+
+\entry
+{2015}
+{Fork Please}
+{\href{https://github.com/kmorrison/fork\_please}{https://github.com/kmorrison/fork\_please}}
+{
+Application for checking in attendees at recruiting events
+\begin{itemize}
+\item Dead simple app in \textbf{flask}, csv upload then a search-and-click table
+\item Judicious use of \textbf{Bootstrap} glyphicons makes everything look awesome
+\end{itemize}}
+
+\entry
+{2015}
+{Frown Destroyer}
+{\href{https://github.com/kmorrison/frown-destroyer}{https://github.com/kmorrison/frown-destroyer}}
+{
+Birthday present for a friend, allowing us to share humorous or cool links async and privately. Every refresh, an random unseen link gets displayed from your friend's pool.
+\begin{itemize}
+\item Another \textbf{flask} app, using \textbf{HTML5} embedding to display content on-site if possible.
+\item Google Users API for auth, to make sure it's really my friend
+\end{itemize}}
+
+\entry
+{2014}
+{Fulcrum}
+{Private github :(}
+{
+Application for helping co-ordinators schedule interviews.
+\begin{itemize}
+\item Integrate with \textbf{Google Calendar API} and \textbf{Lever API} to find interviewers available at given time.
+\item \textbf{Flask} app deploying to Google \textbf{Appengine}, using ndb for datastorage, Google Users API for auth
+\item \textbf{fullcalendar.js} and \textbf{Bootstrap} for display
+\end{itemize}}
+
+\entry
+{2014}
+{My Fair Lady}
+{\href{https://github.com/kmorrison/my\_fair\_lady2}{https://github.com/kmorrison/my\_fair\_lady2}}
+{
+Application for collecting applicant data at career fairs.
+\begin{itemize}
+\item \textbf{django} app deployed to \textbf{Heroku}, \textbf{Postgres} backend
+\item Next iteration will integrate with \textbf{Lever} and \textbf{HackerRank} for automatic candidate pipeline
+\end{itemize}}
+%------------------------------------------------
+
+\end{entrylist}
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{education}
+
+\begin{entrylist}
+
+%------------------------------------------------
+
+\entry
+{2005-2010}
+{Bachelor {\normalfont of Applied Science}, Systems Design}
+{University of Waterloo}
+
+%------------------------------------------------
+
+\end{entrylist}
+
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
